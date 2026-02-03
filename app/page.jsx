@@ -2,7 +2,7 @@
 import Image from "next/image";
 export default function Home() {
   return <main className="min-h-screen bg-linear-to-br from-orange-50 via-white to-orange-50">
-    <header>
+    <header className="bg-white/80 backdrop-blur-sm border-b border-gray-200 flex justify-between items-center">
       <div>
         <div className="flex items-center gap-3">
           <Image src={"/dealdrop_logo.jpg"} alt="Deal Drop Logo"
