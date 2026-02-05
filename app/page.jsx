@@ -67,8 +67,28 @@ export default function Home() {
           Track prices effortlessly with Deal Drop. Get instant alerts on price drops and snag the best deals on your favorite products across top e-commerce sites.
         </p>
 
-        /* Add Product Form */
-        
+        {/* Add Product Form */}
+
+        {/* Features */}
+
+        {products.length === 0 && (
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-16">
+            {FEATURES.map(({ icon: Icon, title, description })=>(
+              <div 
+               key={title} 
+               className="bg-white p-6 rounded-xl border border-gray-200"
+               >
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                  <Icon className="w-6 h-6 text-orange-500" /> 
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
+                <p className="text-gray-600 max-w-md">{description}</p>
+
+              </div>
+            ))}
+          <p className="text-gray-500">No products tracked yet. Add your first product to get started!</p>
+        </div>
+      )}
       </div>
 
     </section>
