@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { LogIn, Bell, Rabbit, Shield,  } from "lucide-react";
 import Image from "next/image";
+import AddProductForm from "@/components/ui/AddProductForm";
 
 export default function Home() {
 
@@ -68,6 +69,7 @@ export default function Home() {
         </p>
 
         {/* Add Product Form */}
+        <AddProductForm user={user} />
 
         {/* Features */}
 
@@ -83,10 +85,10 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
                 <p className="text-gray-600 max-w-md">{description}</p>
-
               </div>
+              
             ))}
-          <p className="text-gray-500">No products tracked yet. Add your first product to get started!</p>
+          
         </div>
       )}
       </div>
