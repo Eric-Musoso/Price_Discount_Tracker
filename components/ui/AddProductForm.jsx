@@ -12,6 +12,7 @@ const AddProductForm = ({ user }) => {
     const handlesubmit = async (e) => {}
     
     return (
+        <>
         <form onSubmit={handlesubmit} className="w-full max-w-2xl mx-auto">
             <div className="flex flex-col sm:flex-row gap-2 items-center">
                 <input 
@@ -41,9 +42,10 @@ const AddProductForm = ({ user }) => {
                 </Button>
 
             </div>
-            
-
         </form>
+
+        {/*Auth Modal*/}
+        </>
     );
 };
 
